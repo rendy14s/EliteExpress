@@ -3,7 +3,7 @@
 </head>
 <body>
 <div id="content">
-<script src="jquery.min.js"></script>
+<script src="../js/jquery.min.js"></script>
 <script>
 function hitung2() {
 var a = $(".a2").val();

@@ -39,7 +39,7 @@ session_start();
         $paket = "SDS";
     }
     else if ($paket == 3) {
-        $paket = "Regular";
+        $paket = "REGULAR";
     }
 
 
@@ -59,8 +59,17 @@ session_start();
          mysqli_error();
 
          if($sql){
-                $_SESSION['from'] = $region;
-                $_SESSION['to'] = $kota;
+                $_SESSION['awb']        = $awb;
+                $_SESSION['from']       = $region;
+                $_SESSION['to']         = $kota;
+                $_SESSION['tanggal']    = $tanggal;
+                $_SESSION['nama']       = $nama;
+                $_SESSION['pt']         = $pt;
+                $_SESSION['pembayaran'] = $pembayaran;
+                $_SESSION['berat']      = $berat;
+                $_SESSION['asuransi']   = $asuransi;
+                $_SESSION['via']        = $via;
+                $_SESSION['paket']      = $paket;
          }
          else{
              echo "gagal insert";

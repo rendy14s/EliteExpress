@@ -7,23 +7,6 @@
 <html>
     <head>
         <title>Input No Bill</title>
-
-        <script src="../Data/jquery.min.js"></script>
-
-        <script>
-            function hitung2() {
-                var a = $(".a2").val();
-                var b = $(".b2").val();
-                c = a * b; //a kali b
-                $(".c2").val(c);
-            }
-            function isNumberKey(evt){
-                var charCode = (evt.which) ? evt.which : event.keyCode;
-                if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57))
-                return false;
-                return true;
-            }
-        </script>
     </head>
     <body>
         <h1>Input No Bill System</h1><br>
@@ -95,7 +78,7 @@
                 Isi Kiriman <br>
                 <textarea name="isi"></textarea> <br>
                 Berat Minimum <br>
-                <input type="text" name="min_berat" value="10Kg"> <br>
+                <input type="text" name="min_berat" value="10Kg" readonly> <br>
                 Berat <br>
                 <input type="text" name="berat"> <br>
                <!--<input type="text" name="harga" id="harga" class="a2" onkeyup="hitung2();" required="" size="40" onkeypress="return isNumberKey(event)" > <br>-->
