@@ -21,6 +21,8 @@
                 <input type="text" name="nama"><br>
                 Nama PT <br>
                 <input type="text" name="pt"> <br>
+                Email PT <br>
+                <input type="email" name="email"> <br>
                 Alamat  <br>
                 <input type="text" name="alamat"><br>
 

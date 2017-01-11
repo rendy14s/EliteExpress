@@ -5,6 +5,7 @@ session_start();
     $tanggal        = $_POST['tanggal'];
     $nama           = $_POST['nama'];
     $pt             = $_POST['pt'];
+    $email          = $_POST['email'];
     $alamat         = $_POST['alamat'];
     $kode           = $_POST['kode'];
     $kota           = $_POST['kota'];
@@ -54,9 +55,8 @@ session_start();
 
     $sql    = mysqli_query ($conn, "INSERT INTO `data` 
                     VALUES 
-        ('$awb','$region','$tanggal','$nama','$pt','$alamat','$kode','$kota','$kode_pos','$provinsi'
+        ('$awb','$region','$tanggal','$nama','$pt','$email','$alamat','$kode','$kota','$kode_pos','$provinsi'
         ,'$negara','$telepon','$via','$paket','$jenis','$isi','$berat','$asuransi','$pembayaran','');");
-         mysqli_error();
 
          if($sql){
                 $_SESSION['awb']        = $awb;
@@ -65,6 +65,7 @@ session_start();
                 $_SESSION['tanggal']    = $tanggal;
                 $_SESSION['nama']       = $nama;
                 $_SESSION['pt']         = $pt;
+                $_SESSION['email']      = $email;
                 $_SESSION['pembayaran'] = $pembayaran;
                 $_SESSION['berat']      = $berat;
                 $_SESSION['asuransi']   = $asuransi;

@@ -8,6 +8,7 @@ include "../Koneksi/koneksi.php";
     $tanggal    = $_SESSION['tanggal'];
     $nama       = $_SESSION['nama'];
     $pt         = $_SESSION['pt'];
+    $email      = $_SESSION['email'];
     $pembayaran = $_SESSION['pembayaran'];
     $berat      = $_SESSION['berat'];
     $asuransi   = $_SESSION['asuransi'];
@@ -42,6 +43,7 @@ include "../Data/ongkir.php";
         </script>
     </head>
     <body>
+    <form action="../Data/proses.php" method="POST">
         Rincian Transaksi <br><br><br>
 
         No AWB <br>
@@ -55,6 +57,9 @@ include "../Data/ongkir.php";
 
         PT <br>
         <input type="text" name="pt" value="<?php echo $pt ?>" readonly> <br> <br>
+
+        EMAIL <br>
+        <input type="text" name="email" value="<?php echo $email ?>" readonly> <br> <br>
 
         FROM <br>
         <input type="text" name="from" value="<?php echo $from ?>" readonly> <br> <br>
@@ -77,6 +82,8 @@ include "../Data/ongkir.php";
         Total Ongkos Kiriman <br>
         <input type="text" name="total" value="<?php echo $tot_price ?>"> <br> <br> <br>
         
+        <input type="submit" value="Proses">
+        </form>
 
 
     </body>
