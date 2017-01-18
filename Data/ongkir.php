@@ -1,5 +1,5 @@
 <?php
-include "../Koneksi/koneksi.php";
+include "../../Koneksi/koneksi.php";
 
     $sql    = mysqli_query($conn, "SELECT * FROM ongkir WHERE `from` = '$from' && `to` = '$to'");
     $data   = mysqli_fetch_array($sql);

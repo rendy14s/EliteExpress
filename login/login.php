@@ -1,6 +1,6 @@
 <?php
 session_start();
-    include "Koneksi/koneksi.php";
+    include "../Koneksi/koneksi.php";
 
     $username   = mysqli_real_escape_string($conn, $_POST['username']);
     $password   = mysqli_real_escape_string($conn, $_POST['password']);
@@ -27,7 +27,7 @@ session_start();
                       $_SESSION['nama']    = $nama;
                       $_SESSION['id_user'] = $data['id_user'];
                      echo '<script language="javascript">alert("Selamat datang '.$nama.'")</script>';
-                     echo '<script>window.location="admin/index.html"</script>';
+                     echo '<script>window.location="../admin/index.html"</script>';
 
 
                 }
@@ -35,7 +35,7 @@ session_start();
                           $_SESSION['id']     = $id;
                           $_SESSION['nama']   = $nama;
                          echo '<script language="javascript">alert("Selamat datang '.$nama.' ")</script>';
-                         echo '<script>window.location="karyawan/index.html"</script>';
+                         echo '<script>window.location="../karyawan/index.html"</script>';
                     }
         }
             else {

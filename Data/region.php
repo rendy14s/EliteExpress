@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../Koneksi/koneksi.php";
+include "../../Koneksi/koneksi.php";
 
         $id_user    = $_SESSION['id_user'];
         

@@ -16,7 +16,7 @@ include "../../Koneksi/koneksi.php";
     $paket      = $_SESSION['paket'];
 
 
-include ".././Data/ongkir.php";
+include "../../Data/ongkir.php";
 
 
     

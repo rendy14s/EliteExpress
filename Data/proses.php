@@ -16,7 +16,7 @@ $pembayaran     = $_POST['pembayaran'];
 $total          = $_POST['total'];
 
 
-    $sql        = mysqli_query($conn,"UPDATE `data` SET `total_ongkir`='$total' WHERE `awb`='$awb'");
+   // $sql        = mysqli_query($conn,"UPDATE `data` SET `total_ongkir`='$total' WHERE `awb`='$awb'");
     $insert     = mysqli_query($conn,"INSERT INTO `data_transaksi` VALUES('$awb','$nama','$tanggal','$pt','$from','$to_kota','$via','$berat','$asuransi','$pembayaran','$total');");
 
 

@@ -12,7 +12,7 @@
         <h1>Input No Bill System</h1><br>
             <form action="input.php" method="POST">
                 No Awb <br>
-                <input type="text" name="awb" value="<?php echo acakangkahuruf(10) . rand(1111111111,9999999999) ?>"><br>
+                <input type="text" name="awb" value="<?php echo acakangkahuruf(10) . rand(111111111,999999999) ?>"><br>
                 Region <br>
                 <input type="text" name="region" value="<?php echo $region ?>" readonly> <br>
                 Tanggal <br>
