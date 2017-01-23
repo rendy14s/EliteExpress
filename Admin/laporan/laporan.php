@@ -32,10 +32,10 @@
           <?php
             $no = 0;
                 while($result       = mysqli_fetch_array($sql)){
-                    $awb            = $result['awb'];
-                    $nama_pt        = $result['nama_pt'];
+                    $awb            = $result['no_awb'];
+                    $nama_pt        = $result['pt'];
                     $pembayaran     = $result['pembayaran'];
-                    $total_ongkir   = $result['total_ongkir'];
+                    $total_ongkir   = $result['total'];
 
                     $no++;
 
