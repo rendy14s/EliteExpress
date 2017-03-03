@@ -5,12 +5,13 @@ session_start();
     $username   = mysqli_real_escape_string($conn, $_POST['username']);
     $password   = mysqli_real_escape_string($conn, $_POST['password']);
 
-        $sql        = mysqli_query ($conn, "SELECT * FROM `user`");
+        $sql        = mysqli_query ($conn, "SELECT * FROM `user` WHERE username = '$username' AND password='$password'");
         $row        = mysqli_num_rows($sql);
         $data       = mysqli_fetch_array($sql);
            
         $id_person  = $data['id_user'];
         $level      = $data['level'];
+        $_SESSION['region'] = $data['region'];
 
 
         if($row != 0){

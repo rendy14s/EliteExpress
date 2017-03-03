@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "../../../Koneksi/koneksi.php";
 include "../../../Data/function_rand.php";
 include "../../../Data/region.php";
@@ -84,7 +85,7 @@ folder instead of downloading all of them to reduce the load. -->
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="../../../index.html" class="btn btn-default btn-flat">Sign out</a>
                     </div>
                   </li>
                 </ul>
@@ -109,18 +110,28 @@ folder instead of downloading all of them to reduce the load. -->
           </div>
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
-            <li class="treeview">
-              <a href="../../index.html">
-                <i class="fa fa-dashboard"></i><span>Dashboard</span>
-              </a>
-            </li>
-            <li class="active treeview">
-              <a href="general.php">
-                <i class="fa fa-edit"></i> <span>Forms</span>
-              </a>
-            </li>
-      </aside>
+                 <li class="header">MAIN NAVIGATION</li>
+        <li class="treeview">
+          <a href="../../index.html">
+            <i class="fa fa-dashboard"></i><span>Dashboard</span>
+          </a>
+        </li>
+        <li class=" active treeview">
+          <a href="general.php">
+            <i class="fa fa-edit"></i> <span>Form Delivery Packing</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="../../laporan/laporan.html">
+            <i class="fa fa-edit"></i> <span>Laporan</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="../../destination/destination.php">
+            <i class="fa fa-edit"></i> <span>Destination</span>
+          </a>
+        </li>
+  </aside>
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -181,13 +192,9 @@ folder instead of downloading all of them to reduce the load. -->
                       <input type="text" name="alamat" class="form-control" placeholder="Alamat Lengkap...">
                     </div>
                     <div class="form-group">
-                      <label>Alamat Lengkap</label>
-                      <input type="text" name="alamat" class="form-control" placeholder="Alamat Lengkap...">
-                    </div>
-                    <div class="form-group">
                       <label>Nama Kota</label>
                       <?php
-                      echo '<select class="form-control" onchange="document.getElementById(\'prd_name\').value = prdName[this.value]">';
+                      echo '<select class="form-control" name="kota" onchange="document.getElementById(\'prd_name\').value = prdName[this.value]">';
                       echo '<option>Pilih Kota</option>'; while ($row = mysqli_fetch_array($result)) { echo '
                       <option value="' . $row['kota'] . '">' . $row['kota'] . '</option>'; $jsArray .= "prdName['" . $row['kota'] . "'] = '" . addslashes($row['kodekota']) . "';\n"; } echo '</select>';  
                     ?>
@@ -262,13 +269,13 @@ folder instead of downloading all of them to reduce the load. -->
                      <div class="form-group">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="asuransi" id="optionsRadios1" > YES
+                          <input type="radio" name="asuransi" value="YES"> YES
                         </label>
                       </div>
                       <div class="form-group">
                       <div class="radio">
                         <label>
-                          <input type="radio" name="asuransi" id="optionsRadios1" > NO
+                          <input type="radio" name="asuransi" value="NO" > NO
                         </label>
                       </div>
                       <div class="form-group">

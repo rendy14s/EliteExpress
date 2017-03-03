@@ -1,25 +1,26 @@
 <?php
 session_start();
-    $awb            = $_POST['awb'];
-    $region         = $_POST['region'];
-    $tanggal        = $_POST['tanggal'];
-    $nama           = $_POST['nama'];
-    $pt             = $_POST['pt'];
-    $email          = $_POST['email'];
-    $alamat         = $_POST['alamat'];
-    $kode           = $_POST['kode'];
-    $kota           = $_POST['kota'];
-    $kode_pos       = $_POST['kode_pos'];
-    $provinsi       = $_POST['provinsi'];
-    $negara         = $_POST['negara'];
-    $telepon        = $_POST['telepon']; 
-    $via            = $_POST['via'];
-    $paket          = $_POST['paket'];
-    $jenis          = $_POST['jenis'];
-    $isi            = $_POST['isi'];
-    $berat          = $_POST['berat'];
-    $asuransi       = $_POST['asuransi'];
-    $pembayaran     = $_POST['pembayaran'];
+    $awb             = $_POST['awb'];
+    $region          = $_POST['region'];
+    $tanggal         = $_POST['tanggal'];
+    $nama            = $_POST['nama'];
+    $pt              = $_POST['pt'];
+    $email           = $_POST['email'];
+    $alamat          = $_POST['alamat'];
+    $kode            = $_POST['kode'];
+    $kota            = $_POST['kota'];
+    $kode_pos        = $_POST['kode_pos'];
+    $provinsi        = $_POST['provinsi'];
+    $negara          = $_POST['negara'];
+    $telepon         = $_POST['telepon']; 
+    $via             = $_POST['via'];
+    $paket           = $_POST['paket'];
+    $jenis           = $_POST['jenis'];
+    $isi             = $_POST['isi'];
+    $berat           = $_POST['berat'];
+    $asuransi        = $_POST['asuransi'];
+    $pembayaran      = $_POST['pembayaran'];
+    $regional_barang = $_POST['alamat'];
 
 
     if($via == 1){
@@ -56,7 +57,7 @@ session_start();
     $sql    = mysqli_query ($conn, "INSERT INTO `data` 
                     VALUES 
         ('$awb','$region','$tanggal','$nama','$pt','$email','$alamat','$kode','$kota','$kode_pos','$provinsi'
-        ,'$negara','$telepon','$via','$paket','$jenis','$isi','$berat','$asuransi','$pembayaran','');");
+        ,'$negara','$telepon','$via','$paket','$jenis','$isi','$berat','$asuransi','$pembayaran','$regional_barang');");
 
          if($sql){
                 $_SESSION['awb']        = $awb;
